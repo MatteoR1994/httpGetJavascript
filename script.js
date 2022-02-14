@@ -22,7 +22,7 @@
 
 /**** Chiamata web FETCH (interna) ****/
 
-fetch("./assets/data.json") // Lancio la chiamata.
+//fetch("./assets/data.json") // Lancio la chiamata.
 // .then((response) => response.json()) // Gestisco i vari stati.
 // .then((data) => console.log(data)) // Gestisco il dato finale.
 // .catch((error) => console.log(error)); // Gestisco l'eventuale errore.
@@ -32,22 +32,25 @@ fetch("./assets/data.json") // Lancio la chiamata.
 
 //fetch("https://opentdb.com/api.php?amount=10")
 //fetch("./assets/data.json")
-.then(manageResonse)
-.then(onDataReady)
-.catch(onError);
+// .then(manageResonse)
+// .then(onDataReady)
+// .catch(onError);
 
 
-function manageResonse(response) {
-    console.log(response);
-    return response.json();
-}
+// function manageResonse(response) {
+//     console.log(response);
+//     return response.json();
+// }
 
-function onDataReady(data) {
-    for (const user of data) {
-        console.log("nome: ", user.username);
-    }
-}
+// function onDataReady(data) {
+//     for (const user of data) {
+//         console.log("nome: ", user.username);
+//     }
+// }
 
-function onError(error) {
-    console.log(error);
-}
+// function onError(error) {
+//     console.log(error);
+// }
+
+
+/**************************************************************************************************/
