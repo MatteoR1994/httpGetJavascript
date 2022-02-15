@@ -19,7 +19,7 @@ function onDataReady(data) {
         const bookTitleData = document.createTextNode("Titolo: " + book.title);
         const bookAuthorData = document.createTextNode("Autore: " + book.author);
         const bookPublisherData = document.createTextNode("Editore: " + book.publisher);
-        const bookPriceData = document.createTextNode("Prezzo: " + book.price +"€");
+        const bookPriceData = document.createTextNode("Prezzo: " + book.price +" €");
         
         lisItem.appendChild(bookTitleData);
         lisItem.appendChild(document.createElement('br'));
