@@ -9,11 +9,19 @@ font-family: 'Montserrat', sans-serif;
 .book {
     font-family: 'Montserrat', sans-serif;
     list-style-type: none;
-    width: 50%;
+    width: 25%;
     height: auto;
     border: 1px solid black;
     border-radius: 8px;
     margin-bottom: 20px;
     padding: 20px;
     background-color: #e4e8ff;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.large-font {
+    font-size: large;
 }

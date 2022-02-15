@@ -14,22 +14,25 @@ function onDataReady(data) {
 
     for (const book of data) {
         const lisItem = document.createElement('li');
-        lisItem.className = "book";
+        lisItem.className += "book" + " ";
 
-        const bookTitleData = document.createTextNode("Titolo: " + book.title);
-        const bookAuthorData = document.createTextNode("Autore: " + book.author);
-        const bookPublisherData = document.createTextNode("Editore: " + book.publisher);
-        const bookPriceData = document.createTextNode("Prezzo: " + book.price +" €");
-        
-        lisItem.appendChild(bookTitleData);
-        lisItem.appendChild(document.createElement('br'));
-        lisItem.appendChild(bookAuthorData);
-        lisItem.appendChild(document.createElement('br'));
-        lisItem.appendChild(bookPublisherData);
-        lisItem.appendChild(document.createElement('br'));
-        lisItem.appendChild(bookPriceData);
+        addTextToHtmlElement(lisItem, book.title, true, "bold large-font");
+        addTextToHtmlElement(lisItem, book.author, true, "large-font");
+        addTextToHtmlElement(lisItem, book.publisher, true);
+        addTextToHtmlElement(lisItem, book.price);
 
         listOfBooksTitle.appendChild(lisItem);
+    }
+}
+
+function addTextToHtmlElement(htmlElement, text, isNewLine = false, className) {
+    const span = document.createElement('span');
+    span.className += className + " ";
+    const textNode = document.createTextNode(text);
+    span.appendChild(textNode);
+    htmlElement.appendChild(span);
+    if (isNewLine) {
+        htmlElement.appendChild(document.createElement('br'));
     }
 }
 
